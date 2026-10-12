@@ -1,5 +1,3 @@
-# WEB
-adicionar atividades de web
 # Minha primeira página Web
 Nome: Gabriel Almeida do Nascimento
 
