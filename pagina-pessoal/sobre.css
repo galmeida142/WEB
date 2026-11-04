@@ -1,0 +1,98 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;  /* Mesmo fundo gelo azulado */
+  color: #2c3e50;             /* Mesmo texto azul-escuro */
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* 2. Cabeçalho (Header) */
+header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color: #1a365d;             /* Azul-marinho forte */
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;  /* Deixa a palavra "LINKS" em maiúsculo */
+  letter-spacing: 1px;        /* Espaçamento elegante entre as letras */
+}
+
+/* 3. Link de Retorno (Voltar para o Index) */
+body > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;    /* Centraliza o link na tela */
+  margin-bottom: 50px;
+}
+
+body > ul li a {
+  display: inline-block;
+  background-color: #2b6cb0;  /* Botão azul padrão */
+  color: white !important;
+  padding: 10px 25px;
+  border-radius: 25px;        /* BOTÃO REDONDO: Formato cápsula */
+  text-decoration: none !important; /* Remove o sublinhado */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+body > ul li a:hover {
+  background-color: #1a365d;  /* Escurece ao passar o mouse */
+  transform: translateY(-2px); /* Efeito sutil de flutuar ao passar o mouse */
+}
+
+/* 4. Bloco das Redes Sociais e Rodapé (Footer) */
+footer {
+  max-width: 50ch;            /* LIMITAÇÃO DE CARACTERES: Mantém o card compacto */
+  margin: 0 auto;             /* CENTRALIZAÇÃO: Centraliza o bloco na tela */
+  background-color: white;    /* Card branco elegante */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  text-align: center;
+  
+  /* Proteção para não separar palavras */
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+/* Lista de Redes Sociais */
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;     /* Alinha Instagram e Linkedin um embaixo do outro */
+  gap: 15px;                  /* Espaço entre os botões das redes */
+  margin-bottom: 25px;
+}
+
+/* Botões do Instagram e Linkedin */
+footer ul li a {
+  display: block;             /* Faz o botão ocupar toda a largura do bloco */
+  padding: 12px;
+  border: 2px solid #3182ce;  /* Borda azul-celeste */
+  color: #3182ce !important;  /* Texto azul-celeste */
+  text-decoration: none !important; /* Sem sublinhado */
+  font-weight: bold;
+  border-radius: 25px;        /* BOTÕES REDONDOS */
+  transition: all 0.2s;
+}
+
+/* Efeito ao passar o mouse nas redes sociais */
+footer ul li a:hover {
+  background-color: #3182ce;  /* Preenche o botão de azul */
+  color: white !important;    /* Texto vira branco */
+}
+
+/* Créditos finais */
+footer p {
+  color: #a0aec0;             /* Cinza suave para o texto de direitos */
+  font-size: 0.9rem;
+  margin: 0;
+  border-top: 1px solid #e2e8f0; /* Linha divisória fina */
+  padding-top: 15px;
+}

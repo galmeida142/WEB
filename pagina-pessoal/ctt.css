@@ -1,0 +1,145 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;  /* Mesmo fundo gelo azulado */
+  color: #2c3e50;             /* Mesmo texto azul-escuro */
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* 2. Cabeçalho (Header) */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #1a365d;             /* Mesmo azul-marinho forte */
+  font-size: 2.5rem;
+}
+
+/* 3. Seção do Formulário (Centralizada e em Bloco/Card) */
+main section {
+  max-width: 60ch;            /* LIMITAÇÃO DE CARACTERES: Confortável para telas */
+  margin: 0 auto 35px auto;   /* CENTRALIZAÇÃO: Centraliza o formulário na tela */
+  background-color: white;    /* Bloco branco elegante */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  
+  /* Proteção para não separar palavras */
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+main h2 {
+  color: #2b6cb0;             /* Título interno em azul médio */
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+  border-bottom: 2px solid #ebf8ff;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* 4. Estilização dos Blocos do Formulário (Fieldset e Legend) */
+fieldset {
+  border: 1px solid #e2e8f0;  /* Borda cinza clara e sutil */
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  color: #2b6cb0;
+  font-weight: bold;
+  padding: 0 10px;            /* Espaço para a borda não encostar no texto */
+}
+
+/* 5. Alinhamento de Textos, Inputs e Labels */
+label {
+  display: block;             /* Faz o texto do rótulo ficar ACIMA do campo */
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #1a365d;
+}
+
+/* Deixa o label do checkbox na mesma linha (lado a lado) */
+label[for="termos"] {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);      /* Deixa o quadradinho do checkbox um pouco maior */
+  cursor: pointer;
+}
+
+/* Design dos campos de digitação (Inputs e Textarea) */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;                /* Ocupa toda a largura interna disponível */
+  box-sizing: border-box;     /* Impede que o padding quebre o layout */
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  background-color: #f7fafc;
+  font-family: inherit;       /* Herda a mesma fonte do site */
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+/* Efeito visual lindo quando o usuário clica para digitar */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3182ce;      /* Borda muda para azul-celeste */
+  background-color: white;
+  box-shadow: 0 0 0 3px #ebf8ff; /* Brilho azulado ao redor */
+}
+
+/* 6. Botões Arredondados Modernos (Estilo Pílula) */
+button {
+  display: inline-block;
+  padding: 12px 25px;         /* Preenchimento para engordar o botão */
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;        /* BOTÃO REDONDO: Efeito cápsula/pílula */
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+/* Botão Enviar (Azul de Destaque) */
+button[type="submit"] {
+  background-color: #2b6cb0;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a365d;  /* Escurece ao passar o mouse */
+}
+
+/* Botão Limpar (Cinza Neutro) */
+button[type="reset"] {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+button[type="reset"]:hover {
+  background-color: #cbd5e0;  /* Escurece o cinza no hover */
+}
+
+/* 7. Rodapé (Footer) */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #a0aec0;             /* Cinza suave para direitos autorais */
+  font-size: 0.9rem;
+}
