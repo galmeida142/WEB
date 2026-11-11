@@ -1,0 +1,226 @@
+/* 1. Configurações gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+
+    /* GRID: organização geral da página */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+
+    gap: 20px;
+}
+
+/* 2. Cabeçalho */
+header {
+    grid-area: header;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+header h1 {
+    color: #1a365d;
+    font-size: 2.5rem;
+
+    /* FLEXBOX */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* 3. Menu de navegação */
+nav {
+    grid-area: nav;
+    grid-column: 1 / -1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+
+    /* FLEXBOX */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #1a365d;
+}
+
+/* 4. Conteúdo principal */
+main {
+    grid-area: main;
+
+    /* GRID */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+#img1 {
+  width: 50px;                /* Controla o tamanho da imagem da imagem */
+  height: auto;
+  border-radius: 50%;         /* Deixa o joinha redondo se for quadrado */
+}
+
+/* 5. Seções */
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    min-width: 0;
+}
+
+/* Apresentação ocupa duas colunas */
+.apresentacao {
+    grid-column: 1 / -1;
+}
+
+/* Hobbies */
+.hobbies {
+    grid-column: 1 / 2;
+}
+
+/* Títulos */
+.destaque {
+    color: #2b6cb0;
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid #ebf8ff;
+    padding-bottom: 10px;
+}
+
+/* Imagem */
+.apresentacao img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 6. Seção de tecnologias */
+.tecnologias {
+    grid-column: 1 / -1;
+}
+
+/* GRID: organização dos quatro cartões */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* 7. Cartões */
+.card {
+    background-color: #f4f7f9;
+    border: 1px solid #dbe5ef;
+    border-radius: 10px;
+    padding: 20px;
+
+    /* FLEXBOX: organização interna dos cartões */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.card h3 {
+    color: #1a365d;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.card p {
+    margin: 0;
+}
+
+/* Tags dos cartões */
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+/* 8. Rodapé */
+footer {
+    grid-area: footer;
+    grid-column: 1 / -1;
+    margin-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer {
+    list-style: none;
+    padding: 0;
+
+    /* FLEXBOX */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer a {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer a:hover {
+    color: #1a365d;
+    text-decoration: underline;
+}
+
+/* 9. Responsividade para celulares */
+@media (max-width: 600px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbies {
+        grid-column: 1 / -1;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
